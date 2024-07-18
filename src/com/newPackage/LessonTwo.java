@@ -67,7 +67,7 @@ public class LessonTwo {
         int num2 = sc.nextInt();
         if (num2 != 0) {
             if (num1 % num2 == 0) {
-                System.out.println(num1 + "  can devide by " + num2 + "  without remainder  ");
+                System.out.println(num1 + "  can divide by " + num2 + "  without remainder  ");
             } else {
                 int quotient = num1/num2;
                 int remainder = num1 % num2;
