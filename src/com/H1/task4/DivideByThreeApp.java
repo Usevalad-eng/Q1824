@@ -8,16 +8,20 @@ public class DivideByThreeApp {
         int num1 = sc.nextInt();
         System.out.println("Enter second number");
         int num2 = sc.nextInt();
-        int sum=num1;
-        if ((num1 % num2 == 0) || num1<=num2) {
-            for (int i=0; i < num2; i++) {
-            sum+=i;
+
+        if ((num1 % num2 == 0) || num1 <= num2) {
+
+            int i = 0;
+
+            int sum;
+            for (sum = num1; sum <= num2; i++) {
+                sum += i;
 
             }
+
             System.out.println(sum);
-        }
-        else{
-                System.out.println("Error, can't devide");
+        } else {
+            System.out.println("Error, can't devide");
         }
 
     }
