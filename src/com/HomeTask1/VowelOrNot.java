@@ -1,8 +1,8 @@
-package com.H1.task1;
+package HomeTask1;
 
 import java.util.Scanner;
 
-public class Main {
+public class VowelOrNot {
     public static void main(String[] args) {
         String a = "A";
         String b = "E";
