@@ -1,5 +1,5 @@
 package com.newPackage;
-import java.sql.SQLOutput;
+
 import java.util.Scanner;
 
 public class LessonTwo {
@@ -41,6 +41,7 @@ public class LessonTwo {
 
     }
     */
+
     public static void main(String[] args) {
         //Напишите программу, которая проверяет делится ли одно число на второе без остатка.
         // В случает если деление не целочисленное, то вывести в консоль сообщение о целой части и об остатке от деления.
@@ -81,4 +82,5 @@ public class LessonTwo {
             System.out.println("Error, can't devide by zero");
         }
     }
+
 }
