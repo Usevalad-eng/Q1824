@@ -1,4 +1,4 @@
-package com.H1.task3;
+package HomeTask1;
 
 import java.util.Scanner;
 

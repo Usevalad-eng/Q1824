@@ -1,4 +1,4 @@
-package com.H1.task4;
+package HomeTask1;
 import java.util.Scanner;
 
 public class DivideByThreeApp {
