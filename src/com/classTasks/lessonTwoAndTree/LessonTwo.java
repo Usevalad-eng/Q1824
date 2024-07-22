@@ -1,4 +1,4 @@
-package com.newPackage;
+package classTasks.lessonTwoAndTree;
 
 import java.util.Scanner;
 
@@ -42,9 +42,9 @@ public class LessonTwo {
     }
     */
 
-    public static void main(String[] args) {
-        //Напишите программу, которая проверяет делится ли одно число на второе без остатка.
-        // В случает если деление не целочисленное, то вывести в консоль сообщение о целой части и об остатке от деления.
+    // public static void main(String[] args) {
+    //Напишите программу, которая проверяет делится ли одно число на второе без остатка.
+    // В случает если деление не целочисленное, то вывести в консоль сообщение о целой части и об остатке от деления.
         /*
         int a = 10;
         int b = 6;
@@ -61,6 +61,31 @@ public class LessonTwo {
         }
 
          */
+
+    /*
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter first number");
+    int num1 = sc.nextInt();
+    System.out.println("Enter second number");
+    int num2 = sc.nextInt();
+    if (num2 != 0) {
+        if (num1 % num2 == 0) {
+            System.out.println(num1 + "  can divide by " + num2 + "  without remainder  ");
+        } else {
+            int quotient = num1/num2;
+            int remainder = num1 % num2;
+            System.out.println(" Integer part "+quotient);
+            System.out.println(" Remainder "+remainder);
+
+        }
+
+
+    } else {
+        System.out.println("Error, can't devide by zero");
+    }
+}
+*/
+    public void divide() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter first number");
         int num1 = sc.nextInt();
@@ -70,10 +95,10 @@ public class LessonTwo {
             if (num1 % num2 == 0) {
                 System.out.println(num1 + "  can divide by " + num2 + "  without remainder  ");
             } else {
-                int quotient = num1/num2;
+                int quotient = num1 / num2;
                 int remainder = num1 % num2;
-                System.out.println(" Integer part "+quotient);
-                System.out.println(" Remainder "+remainder);
+                System.out.println(" Integer part " + quotient);
+                System.out.println(" Remainder " + remainder);
 
             }
 
@@ -81,6 +106,10 @@ public class LessonTwo {
         } else {
             System.out.println("Error, can't devide by zero");
         }
-    }
 
+        // }
+
+
+
+    }
 }

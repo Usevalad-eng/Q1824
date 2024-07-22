@@ -3,9 +3,10 @@ package homeTasks.homeTask1;
 import java.util.Scanner;
 
 public class ExitProgramm {
-    public static void main(String[] args) {
+    public  void input() {
+        /*
         String a = "exit";
-        //String b = " ";
+
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter one word");
         String k = sc.nextLine();
@@ -22,6 +23,21 @@ public class ExitProgramm {
             System.out.println("You entered " + c);
             System.out.println("Can exit");
 
+        }
+*/
+        Scanner sc = new Scanner(System.in);
+        String input;
+        System.out.println("Enter a word, if Exit, you will exit");
+        while (true){
+            input=sc.nextLine().trim();
+            if (input.equalsIgnoreCase("exit")){
+                System.out.println("exit");
+                break;
+
+            } else {
+                System.out.println("you entered:   " + input);
+                System.out.println("Enter a word, if Exit, you will exit");
+            }
         }
 
     }

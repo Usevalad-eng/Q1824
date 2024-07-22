@@ -1,7 +1,7 @@
-package com.lesson;
+package classTasks.lessonOne;
 
-public class Main {
-    public static void main(String[] args) {
+public class Cars {
+    public  void cars() {
         String a = "green";
         String b = "blue";
         String c = "yellow";

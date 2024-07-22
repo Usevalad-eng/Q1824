@@ -3,7 +3,7 @@ package homeTasks.homeTask1;
 import java.util.Scanner;
 
 public class Season {
-    public static void main(String[] args) {
+    public  void season() {
         String m1 = "December";
         String m2 = "January";
         String m3 = "February";
@@ -14,6 +14,9 @@ public class Season {
         String m7 = "June";
         String m8 = "July";
         String m9 = "August";
+        String m10 = "June";
+        String m11 = "July";
+        String m12 = "August";
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter month");
@@ -29,8 +32,11 @@ public class Season {
         } else if (month.equals(m7) || month.equals(m8) || month.equals(m9)) {
 
             System.out.println("This is Spring");
+        } else if (month.equals(m10) || month.equals(m11) || month.equals(m12)) {
+
+            System.out.println("This is Fall");
         } else {
-            System.out.println("Don't Summer or Fall");
+            System.out.println("Error, check words you have entered");
         }
     }
 }
