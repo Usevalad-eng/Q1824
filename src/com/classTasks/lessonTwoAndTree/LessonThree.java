@@ -1,4 +1,4 @@
-package com.newPackage;
+package classTasks.lessonTwoAndTree;
 
 public class LessonThree {
     public int array() {

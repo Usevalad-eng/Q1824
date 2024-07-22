@@ -1,9 +1,9 @@
-package HomeTask1;
+package homeTasks.homeTask1;
 
 import java.util.Scanner;
 
 public class VowelOrNot {
-    public static void main(String[] args) {
+    public  void vowelOrNot() {
         String a = "A";
         String b = "E";
         String c = "O";

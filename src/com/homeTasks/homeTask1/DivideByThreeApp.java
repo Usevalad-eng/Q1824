@@ -1,21 +1,23 @@
-package HomeTask1;
+package homeTasks.homeTask1;
 import java.util.Scanner;
 
 public class DivideByThreeApp {
-    public static void main(String[] args) {
+    public  void divByThree() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter first number");
         int num1 = sc.nextInt();
         System.out.println("Enter second number");
         int num2 = sc.nextInt();
 
-        if ((num1 % num2 == 0) || num1 <= num2) {
+        if (num1 < num2) {
 
-            int i = 0;
+            int i;
 
-            int sum;
-            for (sum = num1; sum <= num2; i++) {
-                sum += i;
+            int sum = 0;
+            for (i=num1+1; i < num2; i++) {
+                if (i%3==0) {
+                    sum += i;
+                }
 
             }
 
