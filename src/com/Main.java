@@ -1,13 +1,11 @@
-import homeTasks.homeTask1.DivideByThreeApp;
-
 public class Main {
     public static void main(String[] args) {
-       // LessonThree summa = new LessonThree();
+//        LessonThree summa = new LessonThree();
 
-       // System.out.println(summa.array());
+//        System.out.println(summa.array());
 //------------------------------------------------------
         //LessonTwo divide = new LessonTwo();
-       // divide.divide();
+        //divide.divide();
 //------------------------------------------------------
         //Cars car = new Cars();
         //car.cars();
@@ -15,13 +13,18 @@ public class Main {
         //VowelOrNot letter = new VowelOrNot();
         //letter.vowelOrNot();
 //------------------------------------------------------
-        // Season ses = new Season();
-        // ses.season();
+         //Season ses = new Season();
+         //ses.season();
 //------------------------------------------------------
         //ExitProgramm exit = new ExitProgramm();
-       //exit.input();
+        //exit.input();
 //-----------------------------------------------------
-        DivideByThreeApp div = new DivideByThreeApp();
-        div.divByThree();
+        //DivideByThreeApp div = new DivideByThreeApp();
+        //div.divByThree();
+//-----------------------------------------------------
+        //homeTask2.1
+ //       FibonachiArray arr = new FibonachiArray();
+ //       arr.arrayFibonachi();
+ //----------------------------------------------------
     }
 }
