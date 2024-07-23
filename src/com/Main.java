@@ -1,3 +1,5 @@
+import homeTasks.homeTask2.DifferenceOfElements;
+
 public class Main {
     public static void main(String[] args) {
 //        LessonThree summa = new LessonThree();
@@ -10,15 +12,19 @@ public class Main {
         //Cars car = new Cars();
         //car.cars();
 //-------------------------------------------------------
+        //homeTask1
         //VowelOrNot letter = new VowelOrNot();
         //letter.vowelOrNot();
 //------------------------------------------------------
-         //Season ses = new Season();
+        //homeTask1
+        //Season ses = new Season();
          //ses.season();
 //------------------------------------------------------
+        //homeTask1
         //ExitProgramm exit = new ExitProgramm();
         //exit.input();
 //-----------------------------------------------------
+        //homeTask1
         //DivideByThreeApp div = new DivideByThreeApp();
         //div.divByThree();
 //-----------------------------------------------------
@@ -26,5 +32,15 @@ public class Main {
  //       FibonachiArray arr = new FibonachiArray();
  //       arr.arrayFibonachi();
  //----------------------------------------------------
+        //homeTask2.2
+ //       MinMaxElement minMaxElem=new MinMaxElement();
+ //       minMaxElem.minMaxElement();
+ //----------------------------------------------------
+        //homeTask2.3
+        DifferenceOfElements dif = new DifferenceOfElements();
+        dif.difference();
+
+
+
     }
 }
