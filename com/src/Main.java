@@ -1,4 +1,5 @@
-import homeTasks.homeTask2.DifferenceOfElements;
+import homeTasks.homeTask3.ArrOfNumbers;
+import homeTasks.homeTask3.SeasonEnam;
 
 public class Main {
     public static void main(String[] args) {
@@ -37,9 +38,34 @@ public class Main {
  //       minMaxElem.minMaxElement();
  //----------------------------------------------------
         //homeTask2.3
-        DifferenceOfElements dif = new DifferenceOfElements();
-        dif.difference();
-
+ //       DifferenceOfElements dif = new DifferenceOfElements();
+ //       dif.difference();
+ //----------------------------------------------------------------
+        //homeTask3 User
+ //       User john = new User("John", "Smith", 33, "man");
+ //       john.getNameSurname();
+ //       john.getUser();
+ //       john.getAge();
+  //      john.setAge(34);
+  //      john.getUser();
+  //      john.setAge(0);
+   //     john.setSex("binary");
+  //      john.getUser();
+ //------------------------------------------------------------------------------------
+        //homeTask3 User Enam
+  //      USERENAME user1 = USERENAME.JOHN;
+  //      user1.getNameSurname();
+  //      user1.getUser();
+  //____________________________________________________________________
+        //homeTask3 season
+   //     SeasonEnam ses=new SeasonEnam(SeasonEnam.Type.FEBRUARY);
+   //     ses.getType();
+   //--------------------------------------------------------------------
+   //          //homeTask3 array
+        ArrOfNumbers arr = new ArrOfNumbers();
+        arr.getArr();
+        arr.getsortedArray();
+        arr.getIndexOfElement();
 
 
     }
