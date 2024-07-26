@@ -14,6 +14,25 @@ public class User {
         this.sex = sex;
     }
 
+    public User(String name, String surname) {
+        this();
+        this.name = name;
+        this.surname = surname;
+    }
+
+    public User() {
+        System.out.println("empty");
+    }
+
+    public User(String name, String surname, int age, String sex,String country, String city) {
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+        Account account = new Account(country, city);
+        System.out.println("user  "+name+"  "+surname+"  "+age+" years old "+sex+" ");
+        account.displayAccount();
+    }
+
     public String getName() {
         return name;
     }
@@ -61,5 +80,17 @@ public class User {
     public void getUser(){
         System.out.println("Name and surname  "
                 + getName() +"   "+ getSurname() + " Age  " + getAge() + " Sex  " + getSex());
+    }
+    public class Account {
+        private String country;
+        private String city;
+
+        public Account(String country, String city) {
+            this.country = country;
+            this.city = city;
+        }
+        public void displayAccount(){
+            System.out.printf("Country: %s \t  City:  %S \t ",country,city);
+        }
     }
 }
