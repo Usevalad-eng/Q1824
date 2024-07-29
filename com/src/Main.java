@@ -88,25 +88,31 @@ public class Main {
         //-------------------------------------------------------------------------------
         //home task4
         Person john = new Person("John", "Smith");
-        john.getPerson();
-        Person jan = new Person("Jan", "Jano");
-        Person janet = new Person("Janet", "Janeou");
-        Worker worker1 = new Worker(1, PROF.WORKER, 1);
-        Worker worker2 = new Worker(1, PROF.WORKER, 1);
-        Director director = new Director(5, PROF.DIRECTOR, 2);
-        director.addWorker(worker1);
-        director.addWorker(worker2);
-        System.out.println("worker1 " + john.getPerson() + " salary " + worker1.printSalary());
-        System.out.println("worker2 " + jan.getPerson() + " salary " + worker2.printSalary());
-        System.out.println("director " + janet.getPerson() + " salary " + director.printSalary());
-        Director secondDirector = new Director(10, PROF.DIRECTOR, 2);
-        director.addWorker(secondDirector);
-        System.out.println(" First director " + janet.getPerson());
-        System.out.println(" Workers under first director: ");
-        for (Employee w : director.workers) {
-            System.out.println("-"+w.getProf());
-
+        //john.getPerson();
+        Person jan = new Person("Jan", "Gold");
+        Person janet = new Person("Janet", "Vu");
+        Employee worker1 = new Worker(1, PROF.WORKER);
+        Employee worker2 = new Worker(4, PROF.WORKER);
+        Employee director = new Director(15, PROF.DIRECTOR);
+        if (director instanceof Director){
+            ((Director)director).addWorker(worker1);
+            ((Director)director).addWorker(worker1);
         }
+        System.out.println("Worker1: " + john.getPerson() +"  "+ john.get2Person() +" salary$: " + worker1.printSalary());
+        System.out.println("Worker2: " + jan.getPerson() +" "+ jan.get2Person()+" salary$: " + worker2.printSalary());
+        System.out.println("Director: " + janet.getPerson() +" "+ janet.get2Person()+" salary$: " + director.printSalary());
+        Employee secondDirector = new Director(15, PROF.DIRECTOR);
+        if (director instanceof Director){
+            ((Director)director).addWorker(secondDirector);
+        }
+        System.out.println(" First director: " + janet.getPerson()+" "+janet.get2Person());
+        System.out.println(" Workers under first director: ");
+        for (Employee w : ((Director)director).workers) {
+            System.out.println("-"+w);
+        }
+        System.out.println("Information about workers:  "+((Director)director).workers);
 
+
+//-------------------------------------------------------------------------------------------------------------
     }
 }

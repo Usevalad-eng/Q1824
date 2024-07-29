@@ -5,17 +5,24 @@ public abstract class Employee {
     public   PROF position;
     public double coef = getProf().getCoef();
 
-    public Employee(int ageExperience, PROF position, double coef) {
+    public Employee(int ageExperience, PROF position) {
         this.ageExperience = ageExperience;
         this.position = position;
-        this.coef = coef;
     }
 
     public abstract PROF getProf();
     public int printSalary(){
-        return 1000* ageExperience * getProf().getCoef();
+        return 1000 * ageExperience * getProf().getCoef();
     }
 
     public abstract String setPosition(PROF position);
 
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "ageExperience=" + ageExperience +
+                ", position=" + position +
+                ", coef=" + coef +
+                '}';
+    }
 }

@@ -25,9 +25,11 @@ public class Person {
         this.surname = surname;
     }
     public String getPerson(){
-        System.out.println("Name and surname:  "+ getName() +"   "+ getSurname());
+        System.out.println("Name and Surname: "+ getName() +"  "+ getSurname());
         return getName();
-
-
+    }
+    public String get2Person(){
+        //System.out.printf("Name: %s, Surname: %S", name,surname);
+        return getSurname();
     }
 }

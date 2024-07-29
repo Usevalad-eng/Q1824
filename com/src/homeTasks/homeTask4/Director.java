@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Director extends Employee{
 
-    public Director(int ageExperience, PROF position, double coef) {
-        super(ageExperience, position, coef);
+    public Director(int ageExperience, PROF position) {
+        super(ageExperience, position);
     }
     public List<Employee> workers = new ArrayList<>();
     public void addWorker(Employee worker){
@@ -29,8 +29,5 @@ public class Director extends Employee{
         return super.printSalary()+(int) (workers.size()*1.2);
     }
 
-    @Override
-    public String toString() {
-        return super.toString();
-    }
+
 }
