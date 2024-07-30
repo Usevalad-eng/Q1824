@@ -88,31 +88,45 @@ public class Main {
         //-------------------------------------------------------------------------------
         //home task4
         Person john = new Person("John", "Smith");
-        //john.getPerson();
         Person jan = new Person("Jan", "Gold");
+        Person ivan = new Person("Ivan", "Gold");
         Person janet = new Person("Janet", "Vu");
+        Person j = new Person("J", "D");
         Employee worker1 = new Worker(1, PROF.WORKER);
         Employee worker2 = new Worker(4, PROF.WORKER);
+        Employee worker3 = new Worker(2, PROF.WORKER);
         Employee director = new Director(15, PROF.DIRECTOR);
         if (director instanceof Director){
             ((Director)director).addWorker(worker1);
-            ((Director)director).addWorker(worker1);
+            ((Director)director).addWorker(worker2);
         }
         System.out.println("Worker1: " + john.getPerson() +"  "+ john.get2Person() +" salary$: " + worker1.printSalary());
         System.out.println("Worker2: " + jan.getPerson() +" "+ jan.get2Person()+" salary$: " + worker2.printSalary());
+        System.out.println("Worker3: " + ivan.getPerson() +" "+ ivan.get2Person()+" salary$: " + worker3.printSalary());
         System.out.println("Director: " + janet.getPerson() +" "+ janet.get2Person()+" salary$: " + director.printSalary());
         Employee secondDirector = new Director(15, PROF.DIRECTOR);
         if (director instanceof Director){
             ((Director)director).addWorker(secondDirector);
         }
+        ((Director)secondDirector).addWorkerForSecondDir(worker3);
         System.out.println(" First director: " + janet.getPerson()+" "+janet.get2Person());
         System.out.println(" Workers under first director: ");
         for (Employee w : ((Director)director).workers) {
-            System.out.println("-"+w);
+            System.out.println("-"+ w);
         }
         System.out.println("Information about workers:  "+((Director)director).workers);
-
-
+        System.out.println("Worker1: " + john.getPerson() +"  "+ john.get2Person() +" salary$: " + worker1.printSalary());
+        System.out.println("Worker2: " + jan.getPerson() +" "+ jan.get2Person()+" salary$: " + worker2.printSalary());
+        System.out.println("Employee3: Second Director: " + j.getPerson() +" "+ j.get2Person()+" salary$: "
+                + ((Director) secondDirector).printSalarySecDir());
+        System.out.println("------------------------------------------------------------------");
+        System.out.println("Second Director: " + j.getPerson() +" "+ j.get2Person()+" salary$: "
+                + ((Director) secondDirector).printSalarySecDir());
+        System.out.println(" Workers under second director: ");
+        for (Employee w : ((Director)secondDirector).workers2) {
+            System.out.println("-"+ w);
+        }
+        System.out.println("Worker: " + ivan.getPerson() +" "+ ivan.get2Person()+" salary$: " + worker3.printSalary());
 //-------------------------------------------------------------------------------------------------------------
     }
 }

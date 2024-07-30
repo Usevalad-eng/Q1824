@@ -12,6 +12,10 @@ public class Director extends Employee{
     public void addWorker(Employee worker){
         workers.add(worker);
     }
+    public List<Employee> workers2 = new ArrayList<>();
+    public void addWorkerForSecondDir(Employee worker){
+        workers2.add(worker);
+    }
     @Override
     public PROF getProf() {
         return PROF.DIRECTOR;
@@ -26,8 +30,11 @@ public class Director extends Employee{
     @Override
     public int printSalary() {
 
-        return super.printSalary()+(int) (workers.size()*1.2);
+        return super.printSalary()*(int) (workers.size()*1.1);
     }
+    public int printSalarySecDir() {
 
+        return super.printSalary()*(int) (workers2.size()*1.1);
+    }
 
 }
