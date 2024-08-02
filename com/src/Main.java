@@ -4,6 +4,10 @@ import homeTasks.homeTask4.*;
 import homeTasks.homeTask4UsingArrays.Direktor;
 import homeTasks.homeTask4UsingArrays.Employe;
 import homeTasks.homeTask4UsingArrays.Worke;
+import homeTasks.homeTask5.*;
+import homeTasks.homeTask5.Director;
+import homeTasks.homeTask5.Employee;
+import homeTasks.homeTask5.Person;
 
 public class Main {
     public static void main(String[] args) {
@@ -132,7 +136,7 @@ public class Main {
         System.out.println("Worker: " + ivan.getPerson() +" "+ ivan.get2Person()+" salary$: " + worker3.printSalary());*/
 //-------------------------------------------------------------------------------------------------------------
         //home task4 using arrays
-        Employe worker1 = new Worke("w1","ws1",1);
+        /*Employe worker1 = new Worke("w1","ws1",1);
         Employe worker2 = new Worke("w2","ws2",2);
         Employe worker3 = new Worke("w3","ws3",3);
         Employe director1 = new Direktor("d1","ds1",1);
@@ -153,8 +157,27 @@ public class Main {
         System.out.println(worker3.getSalary());
         System.out.println(director2 + " " + "has workers: " + "\n" + director1 + ";");
         System.out.println(director1 + " " + "has workers: " + "\n" +  worker1 + "\n"
-                +  worker2 + "\n" + worker3 + ";");
+                +  worker2 + "\n" + worker3 + ";");*/
 //-----------------------------------------------------------------------------------------------------------------
+       //home task 5
+        Employee qa1 = new Qa("QA1", "SQA1", 22);
+        Employee jd1 = new Juniordev("JD1", "SJD1", 25);
+        Employee sd1 = new Seniordev("SD1", "SSD1", 32);
+        Employee tl1 = new Teamlead("TL1", "STL1", 36);
+        Employee dir1 = new Director("D1", "SD1", 42);
+        qa1.addSkill("Can test");
+        Person[] s = new Person[]{qa1,dir1};
+        Project proj1 = new Project("Project1",2, s);
+        jd1.getPromoted();
+        System.out.println("-------------------");
+        System.out.println(jd1);
+        System.out.println(qa1);
+        System.out.println(jd1);
+        System.out.println(sd1);
+        System.out.println(tl1);
+        System.out.println(dir1);
+        System.out.println(proj1);
+        System.out.println("All salary" + ((Director)dir1).getAllSalary(5) + "$");
 
     }
 }
