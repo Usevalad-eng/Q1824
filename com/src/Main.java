@@ -1,3 +1,4 @@
+import classTasks.lessonFourShop.*;
 import homeTasks.homeTask1.SeasonTwo;
 import homeTasks.homeTask3.*;
 import homeTasks.homeTask4.*;
@@ -160,7 +161,7 @@ public class Main {
                 +  worker2 + "\n" + worker3 + ";");*/
 //-----------------------------------------------------------------------------------------------------------------
        //home task 5
-        Employee qa1 = new Qa("QA1", "SQA1", 22);
+        /*Employee qa1 = new Qa("QA1", "SQA1", 22);
         Employee jd1 = new Juniordev("JD1", "SJD1", 25);
         Employee sd1 = new Seniordev("SD1", "SSD1", 32);
         Employee tl1 = new Teamlead("TL1", "STL1", 36);
@@ -177,7 +178,23 @@ public class Main {
         System.out.println(tl1);
         System.out.println(dir1);
         System.out.println(proj1);
-        System.out.println("All salary" + ((Director)dir1).getAllSalary(5) + "$");
+        System.out.println("All salary" + ((Director)dir1).getAllSalary(5) + "$");*/
+        //---------------------------------------------------------------------------
+        //classwork 4 shop
+        OnlineStore onlineStore = new OnlineStore(1000);
+        Product laptop = new Ecectronics("Notebook",1000,10,"Dell","D");
+        Product novel = new Book("Novel",22.2,10,"Cheiz",400);
+        onlineStore.addProduct(laptop);
+        onlineStore.addProduct(novel);
+        onlineStore.displayAllProducts();
+        Customer customer1 = new Customer("Ivan Ivanov","ivan@mail.ru");
+        Customer customer2 = new Customer("Alla Ivanova","alla@mail.ru");
+        Order order1 = new Order(customer1,laptop,2);
+        Order order2 = new Order(customer2,novel,1);
+        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        order1.processOrder();
+        order2.processOrder();
+        onlineStore.displayAllProducts();
 
     }
 }
