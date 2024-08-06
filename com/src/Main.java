@@ -1,14 +1,6 @@
-import classTasks.lessonFourShop.*;
-import homeTasks.homeTask1.SeasonTwo;
-import homeTasks.homeTask3.*;
-import homeTasks.homeTask4.*;
-import homeTasks.homeTask4UsingArrays.Direktor;
-import homeTasks.homeTask4UsingArrays.Employe;
-import homeTasks.homeTask4UsingArrays.Worke;
-import homeTasks.homeTask5.*;
-import homeTasks.homeTask5.Director;
-import homeTasks.homeTask5.Employee;
-import homeTasks.homeTask5.Person;
+import homeTasks.homeTask5v2.*;
+
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
@@ -181,20 +173,43 @@ public class Main {
         System.out.println("All salary" + ((Director)dir1).getAllSalary(5) + "$");*/
         //---------------------------------------------------------------------------
         //classwork 4 shop
-        OnlineStore onlineStore = new OnlineStore(1000);
-        Product laptop = new Ecectronics("Notebook",1000,10,"Dell","D");
-        Product novel = new Book("Novel",22.2,10,"Cheiz",400);
-        onlineStore.addProduct(laptop);
-        onlineStore.addProduct(novel);
-        onlineStore.displayAllProducts();
-        Customer customer1 = new Customer("Ivan Ivanov","ivan@mail.ru");
-        Customer customer2 = new Customer("Alla Ivanova","alla@mail.ru");
-        Order order1 = new Order(customer1,laptop,2);
-        Order order2 = new Order(customer2,novel,1);
-        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-        order1.processOrder();
-        order2.processOrder();
-        onlineStore.displayAllProducts();
+//        OnlineStore onlineStore = new OnlineStore(1000);
+//        Product laptop = new Ecectronics("Notebook",1000,10,"Dell","D");
+//        Product novel = new Book("Novel",22.2,10,"Cheiz",400);
+//        onlineStore.addProduct(laptop);
+//        onlineStore.addProduct(novel);
+//        onlineStore.displayAllProducts();
+//        Customer customer1 = new Customer("Ivan Ivanov","ivan@mail.ru");
+//        Customer customer2 = new Customer("Alla Ivanova","alla@mail.ru");
+//        Order order1 = new Order(customer1,laptop,2);
+//        Order order2 = new Order(customer2,novel,1);
+//        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+//        order1.processOrder();
+//        order2.processOrder();
+//        onlineStore.displayAllProducts();
+        //--------------------------------------------------------------------------------------------------
+            //home task5 v2
+//        Employee qa1 = new QaEngineer("Ivan","Petrov",1);
+//        Employee jd1 = new JuniorDev("Ivan","Sidorov",1);
+//        Employee sd1 = new SeniorDev("Ivan","Ivanov",1);
+//        qa1.addSkills("can test");
+//        jd1.addSkills("can code");
+//        Employee dir = new Director("Tom","Raven",10);
+//        Project testproj = new Project("Test Project");
+//        Project testproj2 = new Project("Test Proj Two");
+//        ((Director)dir).assignToProject(qa1,testproj);
+//        ((Director)dir).assignToProject(jd1,testproj);
+//        ((Director)dir).assignToProject(sd1,testproj);
+//        ((Director)dir).promote(jd1);
+//        System.out.println(testproj);
+//        System.out.println(testproj2);
+//        System.out.println(qa1);
+//        System.out.println(jd1);
+//        System.out.println(sd1);
+//        System.out.println(dir);
+
+ //--------------------------------------------------------------------------------------------------------------------
+          //task6 library
 
     }
 }
