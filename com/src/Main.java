@@ -1,13 +1,4 @@
-import homeTasks.homeTask1.SeasonTwo;
-import homeTasks.homeTask3.*;
-import homeTasks.homeTask4.*;
-import homeTasks.homeTask4UsingArrays.Direktor;
-import homeTasks.homeTask4UsingArrays.Employe;
-import homeTasks.homeTask4UsingArrays.Worke;
-import homeTasks.homeTask5.*;
-import homeTasks.homeTask5.Director;
-import homeTasks.homeTask5.Employee;
-import homeTasks.homeTask5.Person;
+import homeTasks.homeTask6.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -160,7 +151,7 @@ public class Main {
                 +  worker2 + "\n" + worker3 + ";");*/
 //-----------------------------------------------------------------------------------------------------------------
        //home task 5
-        Employee qa1 = new Qa("QA1", "SQA1", 22);
+        /*Employee qa1 = new Qa("QA1", "SQA1", 22);
         Employee jd1 = new Juniordev("JD1", "SJD1", 25);
         Employee sd1 = new Seniordev("SD1", "SSD1", 32);
         Employee tl1 = new Teamlead("TL1", "STL1", 36);
@@ -177,7 +168,62 @@ public class Main {
         System.out.println(tl1);
         System.out.println(dir1);
         System.out.println(proj1);
-        System.out.println("All salary" + ((Director)dir1).getAllSalary(5) + "$");
+        System.out.println("All salary" + ((Director)dir1).getAllSalary(5) + "$");*/
+        //---------------------------------------------------------------------------
+        //classwork 4 shop
+//        OnlineStore onlineStore = new OnlineStore(1000);
+//        Product laptop = new Ecectronics("Notebook",1000,10,"Dell","D");
+//        Product novel = new Book("Novel",22.2,10,"Cheiz",400);
+//        onlineStore.addProduct(laptop);
+//        onlineStore.addProduct(novel);
+//        onlineStore.displayAllProducts();
+//        Customer customer1 = new Customer("Ivan Ivanov","ivan@mail.ru");
+//        Customer customer2 = new Customer("Alla Ivanova","alla@mail.ru");
+//        Order order1 = new Order(customer1,laptop,2);
+//        Order order2 = new Order(customer2,novel,1);
+//        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+//        order1.processOrder();
+//        order2.processOrder();
+//        onlineStore.displayAllProducts();
+        //--------------------------------------------------------------------------------------------------
+            //home task5 v2
+//        Employee qa1 = new QaEngineer("Ivan","Petrov",1);
+//        Employee jd1 = new JuniorDev("Ivan","Sidorov",1);
+//        Employee sd1 = new SeniorDev("Ivan","Ivanov",1);
+//        qa1.addSkills("can test");
+//        jd1.addSkills("can code");
+//        Employee dir = new Director("Tom","Raven",10);
+//        Project testproj = new Project("Test Project");
+//        Project testproj2 = new Project("Test Proj Two");
+//        ((Director)dir).assignToProject(qa1,testproj);
+//        ((Director)dir).assignToProject(jd1,testproj);
+//        ((Director)dir).assignToProject(sd1,testproj);
+//        ((Director)dir).promote(jd1);
+//        System.out.println(testproj);
+//        System.out.println(testproj2);
+//        System.out.println(qa1);
+//        System.out.println(jd1);
+//        System.out.println(sd1);
+//        System.out.println(dir);
+
+ //--------------------------------------------------------------------------------------------------------------------
+          //task6 library
+          OnlineSLibrary onlineSLibrary = new OnlineSLibrary(1000);
+          LibraryProduct magazine = new LibraryMagazine("Magazine",10,"33");
+          LibraryProduct book = new LibraryBook("Books in XXI century",10,"I.Garcia");
+          onlineSLibrary.addProduct(magazine);
+          onlineSLibrary.addProduct(book);
+          onlineSLibrary.displayAllLibraryProducts();
+          LibraryCustomer customer1 = new LibraryCustomer("Ivan Ivanov","ivan@mail.ru");
+          LibraryCustomer customer2 = new LibraryCustomer("Alla Ivanova","alla@mail.ru");
+          LibraryOrder order1 = new LibraryOrder(customer1,magazine,1);
+          LibraryOrder order2 = new LibraryOrder(customer2,book,1);
+          System.out.println("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+          order1.processOrder();
+          order2.processOrder();
+          onlineSLibrary.displayAllLibraryProducts();
+//------------------------------------------------------------------------------------------------
+        //new task
 
     }
 }
