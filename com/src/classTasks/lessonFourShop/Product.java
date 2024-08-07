@@ -16,8 +16,8 @@ public abstract class Product {
         return stockQuantity > 0;
     }
     public void decreaseStock(int quantity){
-        if (quantity< stockQuantity){
-            stockQuantity =stockQuantity-quantity;
+        if (quantity<= stockQuantity){
+            stockQuantity = stockQuantity-quantity;
         }else {
             System.out.println("There is no good on stock");
         }

@@ -1,6 +1,4 @@
-import homeTasks.homeTask5v2.*;
-
-import java.util.Arrays;
+import homeTasks.homeTask6.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -210,6 +208,22 @@ public class Main {
 
  //--------------------------------------------------------------------------------------------------------------------
           //task6 library
+          OnlineSLibrary onlineSLibrary = new OnlineSLibrary(1000);
+          LibraryProduct magazine = new LibraryMagazine("Magazine",10,"33");
+          LibraryProduct book = new LibraryBook("Books in XXI century",10,"I.Garcia");
+          onlineSLibrary.addProduct(magazine);
+          onlineSLibrary.addProduct(book);
+          onlineSLibrary.displayAllLibraryProducts();
+          LibraryCustomer customer1 = new LibraryCustomer("Ivan Ivanov","ivan@mail.ru");
+          LibraryCustomer customer2 = new LibraryCustomer("Alla Ivanova","alla@mail.ru");
+          LibraryOrder order1 = new LibraryOrder(customer1,magazine,1);
+          LibraryOrder order2 = new LibraryOrder(customer2,book,1);
+          System.out.println("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+          order1.processOrder();
+          order2.processOrder();
+          onlineSLibrary.displayAllLibraryProducts();
+//------------------------------------------------------------------------------------------------
+        //new task
 
     }
 }
