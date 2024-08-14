@@ -1,8 +1,6 @@
-import classTasks.lessonFiveSender.Message;
-import classTasks.lessonFiveSender.SendService;
-import classTasks.lessonFiveSender.Telega;
-import classTasks.lessonFiveSender.User;
-import homeTasks.homeTask6.*;
+import classTasks.lessonFiveWebElements.*;
+import classTasks.vehicle.Bike;
+import classTasks.vehicle.Car;
 
 public class Main {
     public static void main(String[] args) {
@@ -234,5 +232,22 @@ public class Main {
         service.sendMessage(message,new Telega());
         service.getMassage(message,new Telega());*/
 //-------------------------------------------------------------------------------------------------
+        //class lesson5 web elements
+        /* Element[] element=new Element[]{new Button(), new CheckBox(), new Label()};
+
+        for (Element el : element) {
+            if (el instanceof Click){
+                ((Click) el).click();
+            }
+        }*/
+//--------------------------------------------------------------------------------------------------------------------
+        //class lesson5 vehicle
+        /*Car car = new Car();
+        Bike bike = new Bike();
+        car.useVehicle(car);
+        System.out.println("-----------------------------------");
+        bike.useVehicle(bike);*/
+
+//--------------------------------------------------------------------------------------------------------------------
     }
 }
