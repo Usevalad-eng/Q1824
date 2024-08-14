@@ -51,7 +51,7 @@ out/
 .idea/
 com/out/
 com/.idea/
-com/com.iml/
+com/com.*
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
