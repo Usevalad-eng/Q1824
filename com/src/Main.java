@@ -1,3 +1,7 @@
+import classTasks.lessonFiveSender.Message;
+import classTasks.lessonFiveSender.SendService;
+import classTasks.lessonFiveSender.Telega;
+import classTasks.lessonFiveSender.User;
 import homeTasks.homeTask6.*;
 
 public class Main {
@@ -208,7 +212,7 @@ public class Main {
 
  //--------------------------------------------------------------------------------------------------------------------
           //task6 library
-          OnlineSLibrary onlineSLibrary = new OnlineSLibrary(1000);
+          /*OnlineSLibrary onlineSLibrary = new OnlineSLibrary(1000);
           LibraryProduct magazine = new LibraryMagazine("Magazine",10,"33");
           LibraryProduct book = new LibraryBook("Books in XXI century",10,"I.Garcia");
           onlineSLibrary.addProduct(magazine);
@@ -221,10 +225,14 @@ public class Main {
           System.out.println("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
           order1.processOrder();
           order2.processOrder();
-          onlineSLibrary.displayAllLibraryProducts();
-          //test3
-//------------------------------------------------------------------------------------------------
-        //new task
+          onlineSLibrary.displayAllLibraryProducts();*/
 
+//------------------------------------------------------------------------------------------------
+        //class lesson5 sender
+        /*Message message = new Message("some message", new User("Vasia"));
+        SendService service = new SendService();
+        service.sendMessage(message,new Telega());
+        service.getMassage(message,new Telega());*/
+//-------------------------------------------------------------------------------------------------
     }
 }
