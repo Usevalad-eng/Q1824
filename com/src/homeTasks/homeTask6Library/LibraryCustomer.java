@@ -1,4 +1,4 @@
-package homeTasks.homeTask6;
+package homeTasks.homeTask6Library;
 
 public class LibraryCustomer {
     protected String name;

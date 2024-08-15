@@ -1,8 +1,8 @@
-package homeTasks.homeTask6;
+package homeTasks.homeTask6Library;
 
 public class OnlineSLibrary {
-    private LibraryProduct[] products;
-    private int productCount;
+    public LibraryProduct[] products;
+    public int productCount;
 
     public OnlineSLibrary(int maxProduct) {
         products = new LibraryProduct[maxProduct];

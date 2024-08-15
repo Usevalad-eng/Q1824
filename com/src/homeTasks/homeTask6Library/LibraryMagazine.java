@@ -1,4 +1,4 @@
-package homeTasks.homeTask6;
+package homeTasks.homeTask6Library;
 
 public class LibraryMagazine extends LibraryProduct{
 
@@ -12,5 +12,10 @@ public class LibraryMagazine extends LibraryProduct{
     @Override
     public void display() {
         System.out.printf("Name of the magazine: %S Quantity:%d   N:%s \t", name, libraryQuantity, number);
+    }
+
+    @Override
+    public void displayGetBack() {   //new
+        System.out.printf("Name of the magazine: %S    N:%s \t", name, number);
     }
 }

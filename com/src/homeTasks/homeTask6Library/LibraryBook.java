@@ -1,4 +1,4 @@
-package homeTasks.homeTask6;
+package homeTasks.homeTask6Library;
 
 public class LibraryBook extends LibraryProduct{
     protected String author;
@@ -11,5 +11,10 @@ public class LibraryBook extends LibraryProduct{
     @Override
     public void display() {
         System.out.printf("Name of the book: %s Quantity: %d Author: %s \t", name, libraryQuantity, author);
+    }
+
+    @Override
+    public void displayGetBack() {       //new
+        System.out.printf("Name of the book: %s  Author: %s \t", name, author);
     }
 }
