@@ -1,11 +1,35 @@
-import classTasks.lessonFiveSender.Message;
-import classTasks.lessonFiveSender.SendService;
-import classTasks.lessonFiveSender.Telega;
-import classTasks.lessonFiveSender.User;
-import homeTasks.homeTask6.*;
+import homeTasks.homeTask6Library.*;
 
 public class Main {
     public static void main(String[] args) {
+
+          //task6 library
+          OnlineSLibrary onlineSLibrary = new OnlineSLibrary(1000);
+          LibraryProduct magazine = new LibraryMagazine("Magazine",10,"33");
+          LibraryProduct book = new LibraryBook("Books in XXI century",10,"I.Garcia");
+          onlineSLibrary.addProduct(magazine);
+          onlineSLibrary.addProduct(book);
+          onlineSLibrary.displayAllLibraryProducts();
+          LibraryCustomer customer1 = new LibraryCustomer("Ivan Ivanov","ivan@mail.ru");
+          LibraryCustomer customer2 = new LibraryCustomer("Alla Ivanova","alla@mail.ru");
+          LibraryOrder order1 = new LibraryOrder(customer1,magazine,1);
+          LibraryOrder order2 = new LibraryOrder(customer2,book,1);
+          System.out.println("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+          order1.processOrder();
+          order2.processOrder();
+          onlineSLibrary.displayAllLibraryProducts();
+          System.out.println("\n------------------------------------------------------------------");
+          order1.processOrderGetBack();  //new
+          order2.processOrderGetBack();  //new
+          onlineSLibrary.displayAllLibraryProducts();  //new
+          System.out.println("********************************************************************");
+          LibraryProduct vhs = new LibraryVHS("King-kong",1,100); //new
+          onlineSLibrary.addProduct(vhs); //new
+          ((Length) vhs).getLength();   //new
+          onlineSLibrary.displayAllLibraryProducts();  //new
+//---------------------------------------------------------------------------------------------------------------------
+
+ //-------------------------------------------------------------------------------------------------------------------
 //        LessonThree summa = new LessonThree();
 
 //        System.out.println(summa.array());
@@ -211,21 +235,7 @@ public class Main {
 //        System.out.println(dir);
 
  //--------------------------------------------------------------------------------------------------------------------
-          //task6 library
-          /*OnlineSLibrary onlineSLibrary = new OnlineSLibrary(1000);
-          LibraryProduct magazine = new LibraryMagazine("Magazine",10,"33");
-          LibraryProduct book = new LibraryBook("Books in XXI century",10,"I.Garcia");
-          onlineSLibrary.addProduct(magazine);
-          onlineSLibrary.addProduct(book);
-          onlineSLibrary.displayAllLibraryProducts();
-          LibraryCustomer customer1 = new LibraryCustomer("Ivan Ivanov","ivan@mail.ru");
-          LibraryCustomer customer2 = new LibraryCustomer("Alla Ivanova","alla@mail.ru");
-          LibraryOrder order1 = new LibraryOrder(customer1,magazine,1);
-          LibraryOrder order2 = new LibraryOrder(customer2,book,1);
-          System.out.println("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-          order1.processOrder();
-          order2.processOrder();
-          onlineSLibrary.displayAllLibraryProducts();*/
+
 
 //------------------------------------------------------------------------------------------------
         //class lesson5 sender
@@ -234,5 +244,22 @@ public class Main {
         service.sendMessage(message,new Telega());
         service.getMassage(message,new Telega());*/
 //-------------------------------------------------------------------------------------------------
+        //class lesson5 web elements
+        /* Element[] element=new Element[]{new Button(), new CheckBox(), new Label()};
+
+        for (Element el : element) {
+            if (el instanceof Click){
+                ((Click) el).click();
+            }
+        }*/
+//--------------------------------------------------------------------------------------------------------------------
+        //class lesson5 vehicle
+        /*Car car = new Car();
+        Bike bike = new Bike();
+        car.useVehicle(car);
+        System.out.println("-----------------------------------");
+        bike.useVehicle(bike);*/
+
+//--------------------------------------------------------------------------------------------------------------------
     }
 }

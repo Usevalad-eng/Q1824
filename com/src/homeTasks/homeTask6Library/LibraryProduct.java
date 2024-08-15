@@ -1,6 +1,6 @@
-package homeTasks.homeTask6;
+package homeTasks.homeTask6Library;
 
-public abstract class LibraryProduct {
+public abstract class LibraryProduct{
     protected String name;
     protected int libraryQuantity;
 
@@ -9,6 +9,8 @@ public abstract class LibraryProduct {
         this.libraryQuantity = Libquantity;
     }
     public abstract void display();
+
+    public abstract void displayGetBack(); //new
     public boolean isAvailable(){
         return libraryQuantity > 0;
     }
@@ -17,6 +19,13 @@ public abstract class LibraryProduct {
             libraryQuantity = libraryQuantity- quantity;
         }else {
             System.out.println("There is no books/magazines in library");
+        }
+    }
+    public void increaseLibraryStock(int quantity){  //new
+        if (quantity > 0){
+            libraryQuantity += quantity;
+        }else {
+            System.out.println("Can not increase library stock");
         }
     }
 }
