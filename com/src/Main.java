@@ -1,10 +1,17 @@
-import homeTasks.homeTask6Library.*;
+import classTasks.lessonFiveSender.*;
+import homeTasks.homeTask5EmplyeeV2.*;
 
 public class Main {
     public static void main(String[] args) {
-
+        //class lesson5 sender
+        Message message = new Message("some message", new User("Vasia"));
+        SendService service = new SendService();
+        Sender telega = new Telega();
+        service.sendMessage(message,telega);
+        service.getMassage(message,new Telega());
+//---------------------------------------------------------------------------------------------------------------------
           //task6 library
-          OnlineSLibrary onlineSLibrary = new OnlineSLibrary(1000);
+          /*OnlineSLibrary onlineSLibrary = new OnlineSLibrary(1000);
           LibraryProduct magazine = new LibraryMagazine("Magazine",10,"33");
           LibraryProduct book = new LibraryBook("Books in XXI century",10,"I.Garcia");
           onlineSLibrary.addProduct(magazine);
@@ -26,8 +33,33 @@ public class Main {
           LibraryProduct vhs = new LibraryVHS("King-kong",1,100); //new
           onlineSLibrary.addProduct(vhs); //new
           ((Length) vhs).getLength();   //new
-          onlineSLibrary.displayAllLibraryProducts();  //new
+          onlineSLibrary.displayAllLibraryProducts();  //new*/
 //---------------------------------------------------------------------------------------------------------------------
+//      home task5 v2
+        /*Employee qa1 = new QaEngineer("Petr","Petrov",1);
+        Employee jd1 = new JuniorDev("Sidr","Sidorov",1);
+        Employee sd1 = new SeniorDev("Ivan","Ivanov",1);
+        qa1.addSkills("can test");
+        jd1.addSkills("can code");
+        Employee dir = new Director("Tom","Raven",10);
+        Project testproj = new Project(" Test Project ");
+        Project testproj2 = new Project(" Test Proj Two ");
+        ((Director)dir).assignToProject(qa1,testproj);
+        ((Director)dir).assignToProject(jd1,testproj);
+        ((Director)dir).assignToProject(sd1,testproj);
+        ((Director)dir).promote(jd1);
+        System.out.println(testproj);
+        System.out.println(testproj2);
+        System.out.println("********************************");
+        System.out.println(qa1);
+        System.out.println(jd1);
+        System.out.println(sd1);
+        System.out.println(dir);
+        System.out.println("********************************");    //new
+        Employee[] employees = new Employee[]{qa1,jd1,sd1,dir};
+        ((Director)dir).getEmployee(employees, qa1, "Petr");
+        ((Director)dir).addWorker(qa1);
+        ((Director)dir).getEmployee(employees, qa1, "Petr");*/
 
  //-------------------------------------------------------------------------------------------------------------------
 //        LessonThree summa = new LessonThree();
@@ -213,36 +245,15 @@ public class Main {
 //        order1.processOrder();
 //        order2.processOrder();
 //        onlineStore.displayAllProducts();
-        //--------------------------------------------------------------------------------------------------
-            //home task5 v2
-//        Employee qa1 = new QaEngineer("Ivan","Petrov",1);
-//        Employee jd1 = new JuniorDev("Ivan","Sidorov",1);
-//        Employee sd1 = new SeniorDev("Ivan","Ivanov",1);
-//        qa1.addSkills("can test");
-//        jd1.addSkills("can code");
-//        Employee dir = new Director("Tom","Raven",10);
-//        Project testproj = new Project("Test Project");
-//        Project testproj2 = new Project("Test Proj Two");
-//        ((Director)dir).assignToProject(qa1,testproj);
-//        ((Director)dir).assignToProject(jd1,testproj);
-//        ((Director)dir).assignToProject(sd1,testproj);
-//        ((Director)dir).promote(jd1);
-//        System.out.println(testproj);
-//        System.out.println(testproj2);
-//        System.out.println(qa1);
-//        System.out.println(jd1);
-//        System.out.println(sd1);
-//        System.out.println(dir);
-
+//--------------------------------------------------------------------------------------------------
  //--------------------------------------------------------------------------------------------------------------------
-
-
 //------------------------------------------------------------------------------------------------
         //class lesson5 sender
-        /*Message message = new Message("some message", new User("Vasia"));
-        SendService service = new SendService();
-        service.sendMessage(message,new Telega());
-        service.getMassage(message,new Telega());*/
+//        Message message = new Message("some message", new User("Vasia"));
+//        SendService service = new SendService();
+//        Sender telega = new Telega();
+//        service.sendMessage(message,telega);
+//        service.getMassage(message,new Telega());
 //-------------------------------------------------------------------------------------------------
         //class lesson5 web elements
         /* Element[] element=new Element[]{new Button(), new CheckBox(), new Label()};
