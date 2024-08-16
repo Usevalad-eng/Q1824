@@ -1,4 +1,4 @@
-package homeTasks.homeTask5v2;
+package homeTasks.homeTask5EmplyeeV2;
 
 public class QaEngineer extends Employee{
 

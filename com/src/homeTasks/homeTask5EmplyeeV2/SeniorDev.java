@@ -1,4 +1,4 @@
-package homeTasks.homeTask5v2;
+package homeTasks.homeTask5EmplyeeV2;
 
 public class SeniorDev extends Employee{
     public SeniorDev(String name, String sname, int experience) {

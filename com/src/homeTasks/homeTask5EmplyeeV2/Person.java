@@ -1,4 +1,4 @@
-package homeTasks.homeTask5v2;
+package homeTasks.homeTask5EmplyeeV2;
 
 public class Person {
     protected String name;
@@ -9,6 +9,10 @@ public class Person {
         this.sname = sname;
     }
     public String getFullName(){
-        return name + sname;
+        return name + " " + sname;
+    }
+
+    public String getName() {
+        return name;
     }
 }
