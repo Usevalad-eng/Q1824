@@ -1,14 +1,74 @@
 import classTasks.lessonFiveSender.*;
+import classTasks.lessonSixCollections.User;
+import classTasks.lessonSixCollections.UserComparator;
 import homeTasks.homeTask5EmplyeeV2.*;
+import homeTasks.homeTask6LibraryV2.Book;
+import homeTasks.homeTask6LibraryV2.Dvd;
+import homeTasks.homeTask6LibraryV2.Library;
+import homeTasks.homeTask7Collect.UserCollection;
+import homeTasks.homeTask7Collect.UserService;
+
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
+
+ //-------------------------------------------------------------------------------------------------------------------
+        //home task 7 collections
+        List<UserCollection> userCollections = new ArrayList<>();
+        userCollections.add(new UserCollection("Man1",22,"man"));
+        userCollections.add(new UserCollection("Man2",23,"man"));
+        userCollections.add(new UserCollection("Man3",24,"man"));
+        System.out.println(userCollections);
+        Set<UserCollection> userCollections1 = new HashSet<>();
+        userCollections1.add(new UserCollection("ManMan",32,"man"));
+        userCollections1.add(new UserCollection("manMan2",32,"man"));
+        userCollections1.add(new UserCollection("ManMan3",32,"man"));
+        System.out.println(userCollections1);
+        /*Map<String,UserCollection> userCollectionMap = new HashMap<>();
+        userCollectionMap.put("one", new UserCollection("Tom",55,"man"));
+        userCollectionMap.put("two", new UserCollection("John",56,"man"));
+        userCollectionMap.put("three", new UserCollection("Ivan",57,"man"));
+        System.out.println(userCollectionMap);*/
+        System.out.println("*****************************************************************************************");
+        UserService service = new UserService();
+        service.addUser("one",new UserCollection("Vasia",22,"man"));
+        service.addUser("two",new UserCollection("Petia",33,"man"));
+        service.addUser("three",new UserCollection("Jenifer",20,"woman"));
+        service.getUserName("Vasia");
+        service.getUserName("Petia");
+        System.out.println("****************************************************");
+        service.getAllUsersBySex();
+        System.out.println("****************************************************");
+        service.getAllUsersByAge();
+
+//---------------------------------------------------------------------------------------------------------------------
         //class lesson5 sender
-        Message message = new Message("some message", new User("Vasia"));
+        /*Message message = new Message("some message", new User("Vasia"));
         SendService service = new SendService();
         Sender telega = new Telega();
         service.sendMessage(message,telega);
-        service.getMassage(message,new Telega());
+        service.getMassage(message,new Telega());*/
+//---------------------------------------------------------------------------------------------------------------------
+        //libraryV2
+        /*Library library = new Library(10);
+        library.addItem(new Book("Book1", "Author1"));
+        library.addItem(new Book("Book2", "Author2"));
+        library.addItem(new Dvd("DVD1", 100));
+        library.addItem(new Dvd("DVD2", 120));
+        library.displayAvailableItems();
+        System.out.println("-----------------------------------");
+        library.borrowItem("Book1");
+        library.borrowItem("DVD1");
+        library.displayAvailableItems();
+        System.out.println("-----------------------------------");
+        library.returnItem("Book1");
+        library.returnItem("DVD1");
+        library.displayAvailableItems();
+        System.out.println("-----------------------------------");
+        library.borrowItem("Book3");*/
+
+
 //---------------------------------------------------------------------------------------------------------------------
           //task6 library
           /*OnlineSLibrary onlineSLibrary = new OnlineSLibrary(1000);
@@ -272,5 +332,58 @@ public class Main {
         bike.useVehicle(bike);*/
 
 //--------------------------------------------------------------------------------------------------------------------
+          //classwork collections
+//        ArrayList<String> arrayL = new ArrayList<>();
+//        arrayL.add("first");
+//        arrayL.add("Second");
+//        System.out.println(arrayL);
+//        arrayL.add(1, "first test");
+//        System.out.println(arrayL);
+//        System.out.println("--------------------");
+//        for (String el : arrayL){
+//            System.out.println(el);
+//        }
+//        System.out.println("--------------------");
+//        Iterator<String> iter = arrayL.iterator();
+//        while (iter.hasNext()){
+//            System.out.println(iter.next());
+//        }
+//        System.out.println("________________________");
+//        ArrayDeque<String> arrayD = new ArrayDeque<>();
+//        arrayD.add("First");
+//        arrayD.add("Second");
+//        arrayD.add("Third");
+//        while(arrayD.peek()!=null){
+//            System.out.println(arrayD.poll());
+//        }
+//        System.out.println("++++++++");
+//        HashSet<String> setL = new HashSet<>();
+//        setL.add("first1");
+//        setL.add("first2");
+//        setL.add("first3");
+//        System.out.println(setL);
+//        System.out.println(setL.contains("first3"));
+//        HashSet<User> setU = new HashSet<>();
+//        setU.add(new User("Vasia",22));
+//        setU.add(new User("Petia",24));
+//        System.out.println(setU);
+//        TreeSet<User> setT = new TreeSet<>();
+//        setT.add(new User("Tom",55));
+//        setT.add(new User("Tom2",56));
+//        System.out.println(setT);
+//        System.out.println("++++++++");
+//        Set<User> setU2 = new TreeSet<>(new UserComparator());
+//        setU2.add(new User("Name1",66));
+//        setU2.add(new User("Name2",66));
+//        System.out.println(setU2);
+//        System.out.println("***********************************");
+//        Map<String,User> mapU = new HashMap<>();
+//        mapU.put("one",new User("Oleg1",22));
+//        mapU.put("two",new User("Oleg2",22));
+//        mapU.put("three",new User("Oleg2",22));
+//        System.out.println(mapU);
+
+
+//---------------------------------------------------------------
     }
 }
