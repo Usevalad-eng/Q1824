@@ -1,4 +1,5 @@
 import classTasks.lessonFiveSender.*;
+import classTasks.lessonSevenLibrarySystem.LibrarySystem;
 import classTasks.lessonSixCollections.UserComparator;
 import homeTasks.homeTask5EmplyeeV2.*;
 import homeTasks.homeTask6LibraryV2.Book;
@@ -15,6 +16,9 @@ public class Main {
 
  //-------------------------------------------------------------------------------------------------------------------
         //new task
+        //class work  Library system
+        LibrarySystem librarySystem = new LibrarySystem();
+        librarySystem.run();
 
  //-------------------------------------------------------------------------------------------------------------------
         //home task 7 collections v2
@@ -418,7 +422,7 @@ public class Main {
 //        mapU.put("three",new User("Oleg2",22));
 //        System.out.println(mapU);
 //---------------------------------------------------------------------------------------------------------------------
-          //new task
+
 
 //--------------------------------------------------------------------------------------------------------------------
     }
