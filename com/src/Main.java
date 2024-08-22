@@ -1,12 +1,13 @@
 import classTasks.lessonFiveSender.*;
-import classTasks.lessonSixCollections.User;
+import classTasks.lessonSevenLibrarySystem.LibrarySystem;
 import classTasks.lessonSixCollections.UserComparator;
 import homeTasks.homeTask5EmplyeeV2.*;
 import homeTasks.homeTask6LibraryV2.Book;
 import homeTasks.homeTask6LibraryV2.Dvd;
 import homeTasks.homeTask6LibraryV2.Library;
 import homeTasks.homeTask7Collect.UserCollection;
-import homeTasks.homeTask7Collect.UserService;
+import homeTasks.homeTask7collectV2.User;
+import homeTasks.homeTask7collectV2.UserService;
 
 import java.util.*;
 
@@ -14,8 +15,46 @@ public class Main {
     public static void main(String[] args) {
 
  //-------------------------------------------------------------------------------------------------------------------
+        //new task
+        //class work  Library system
+        LibrarySystem librarySystem = new LibrarySystem();
+        librarySystem.run();
+
+ //-------------------------------------------------------------------------------------------------------------------
+        //home task 7 collections v2
+        /*User user1 = new User("Alice","Female",25);
+        User user2 = new User("Bob","Male",25);
+        User user3 = new User("Charlie","Male",25);
+        User user4 = new User("Diana","Female",25);
+        User user5 = new User("Alice","Female",22);
+        List<User> userList = new ArrayList<>();
+        userList.add(user1);
+        userList.add(user2);
+        userList.add(user3);
+        userList.add(user4);
+        userList.add(user5);
+        Set<User> userSet = new HashSet<>();
+        userSet.add(user1);
+        userSet.add(user2);
+        userSet.add(user3);
+        userSet.add(user4);
+        userSet.add(user5);
+        UserService userService = new UserService(userList,userSet);
+        System.out.println("Users named Alice: " + userService.findUsersByName("Alice"));
+        System.out.println("Users Female: " + userService.findUsersByGender("Female"));
+        System.out.println("Users sorted by age: " + userService.getSortedUsersByAge());
+        System.out.println("__________________________________________________________");
+        System.out.println("Users named Alice: " + userService.getUsersByName("Alice"));
+        System.out.println("Users Female: " + userService.getUsersByGender("Female"));
+        System.out.println("Users sorted by age: " + userService.getSortedUsersSetByAge());
+        System.out.println(userList);
+        System.out.println(userSet);
+        System.out.println("+++++++++++++++++++++++++++");
+        List<User> userList1 = new LinkedList<>(userList);
+        System.out.println(userList1);*/
+        //------------------------------------------------------------------------------------------------------------
         //home task 7 collections
-        List<UserCollection> userCollections = new ArrayList<>();
+        /*List<UserCollection> userCollections = new ArrayList<>();
         userCollections.add(new UserCollection("Man1",22,"man"));
         userCollections.add(new UserCollection("Man2",23,"man"));
         userCollections.add(new UserCollection("Man3",24,"man"));
@@ -24,13 +63,13 @@ public class Main {
         userCollections1.add(new UserCollection("ManMan",32,"man"));
         userCollections1.add(new UserCollection("manMan2",32,"man"));
         userCollections1.add(new UserCollection("ManMan3",32,"man"));
-        System.out.println(userCollections1);
+        System.out.println(userCollections1);*/
         /*Map<String,UserCollection> userCollectionMap = new HashMap<>();
         userCollectionMap.put("one", new UserCollection("Tom",55,"man"));
         userCollectionMap.put("two", new UserCollection("John",56,"man"));
         userCollectionMap.put("three", new UserCollection("Ivan",57,"man"));
         System.out.println(userCollectionMap);*/
-        System.out.println("*****************************************************************************************");
+        /*System.out.println("*****************************************************************************************");
         UserService service = new UserService();
         service.addUser("one",new UserCollection("Vasia",22,"man"));
         service.addUser("two",new UserCollection("Petia",33,"man"));
@@ -40,7 +79,7 @@ public class Main {
         System.out.println("****************************************************");
         service.getAllUsersBySex();
         System.out.println("****************************************************");
-        service.getAllUsersByAge();
+        service.getAllUsersByAge();*/
 
 //---------------------------------------------------------------------------------------------------------------------
         //class lesson5 sender
@@ -382,8 +421,9 @@ public class Main {
 //        mapU.put("two",new User("Oleg2",22));
 //        mapU.put("three",new User("Oleg2",22));
 //        System.out.println(mapU);
+//---------------------------------------------------------------------------------------------------------------------
 
 
-//---------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------------------------
     }
 }
