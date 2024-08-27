@@ -1,4 +1,4 @@
-package classTasks.vehicle;
+package classTasks.lessonFiveVehicle;
 
 public interface Vehicle {
     void start();

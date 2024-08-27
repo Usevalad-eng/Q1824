@@ -1,4 +1,4 @@
-package classTasks.vehicle;
+package classTasks.lessonFiveVehicle;
 
 public class Bike extends AbstractVehicle{
 

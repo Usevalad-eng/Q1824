@@ -1,25 +1,20 @@
-import classTasks.lessonFiveSender.*;
-import classTasks.lessonSevenLibrarySystem.LibrarySystem;
-import classTasks.lessonSixCollections.UserComparator;
-import homeTasks.homeTask5EmplyeeV2.*;
-import homeTasks.homeTask6LibraryV2.Book;
-import homeTasks.homeTask6LibraryV2.Dvd;
-import homeTasks.homeTask6LibraryV2.Library;
-import homeTasks.homeTask7Collect.UserCollection;
-import homeTasks.homeTask7collectV2.User;
-import homeTasks.homeTask7collectV2.UserService;
-
-import java.util.*;
+import classTasks.lessonEightTodoList.ToDoList;
+import classTasks.lessonFiveVehicle.Bike;
+import classTasks.lessonFiveVehicle.Car;
+import homeTasks.homeTaskeEightStrings.AnalizerOfText;
 
 public class Main {
     public static void main(String[] args) {
 
  //-------------------------------------------------------------------------------------------------------------------
         //new task
-        //class work  Library system
-        LibrarySystem librarySystem = new LibrarySystem();
-        librarySystem.run();
+        AnalizerOfText analizerOfText = new AnalizerOfText();
+        analizerOfText.analizerOfText();
 
+//-------------------------------------------------------------------------------------------------------------------
+        //class work  Library system
+        /*LibrarySystem librarySystem = new LibrarySystem();
+        librarySystem.run();*/
  //-------------------------------------------------------------------------------------------------------------------
         //home task 7 collections v2
         /*User user1 = new User("Alice","Female",25);
@@ -369,7 +364,6 @@ public class Main {
         car.useVehicle(car);
         System.out.println("-----------------------------------");
         bike.useVehicle(bike);*/
-
 //--------------------------------------------------------------------------------------------------------------------
           //classwork collections
 //        ArrayList<String> arrayL = new ArrayList<>();
@@ -422,7 +416,9 @@ public class Main {
 //        mapU.put("three",new User("Oleg2",22));
 //        System.out.println(mapU);
 //---------------------------------------------------------------------------------------------------------------------
-
+        //class work  to do list
+        /*ToDoList toDoList = new ToDoList();
+        toDoList.run();*/
 
 //--------------------------------------------------------------------------------------------------------------------
     }

@@ -1,4 +1,4 @@
-package classTasks.vehicle;
+package classTasks.lessonFiveVehicle;
 
 public abstract class AbstractVehicle implements Vehicle{
     String type;
