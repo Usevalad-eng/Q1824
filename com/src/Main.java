@@ -1,13 +1,15 @@
 import classTasks.lessonEightTodoList.ToDoList;
 import classTasks.lessonFiveVehicle.Bike;
 import classTasks.lessonFiveVehicle.Car;
+import homeTasks.homeTaskeEightStrings.AnalizerOfText;
 
 public class Main {
     public static void main(String[] args) {
 
  //-------------------------------------------------------------------------------------------------------------------
         //new task
-
+        AnalizerOfText analizerOfText = new AnalizerOfText();
+        analizerOfText.analizerOfText();
 
 //-------------------------------------------------------------------------------------------------------------------
         //class work  Library system
