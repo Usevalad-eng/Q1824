@@ -1,20 +1,23 @@
-import classTasks.lessonEightTodoList.ToDoList;
-import classTasks.lessonFiveVehicle.Bike;
-import classTasks.lessonFiveVehicle.Car;
-import homeTasks.homeTaskeEightStrings.AnalizerOfText;
+import homeTasks.homeTask8Strings.AnalyzerOfText;
+import homeTasks.homeTask8Strings.AnalyzerOfTextV2;
 
 public class Main {
     public static void main(String[] args) {
 
  //-------------------------------------------------------------------------------------------------------------------
         //new task
-        AnalizerOfText analizerOfText = new AnalizerOfText();
-        analizerOfText.analizerOfText();
+        /*AnalyzerOfText analyzerOfText = new AnalyzerOfText();
+        analyzerOfText.analyzerOfText();*/
+
+        /*AnalyzerOfTextV2 analyzerOfTextV2 = new AnalyzerOfTextV2();
+        analyzerOfTextV2.analyzerOfTextRun();*/
+
 
 //-------------------------------------------------------------------------------------------------------------------
         //class work  Library system
         /*LibrarySystem librarySystem = new LibrarySystem();
         librarySystem.run();*/
+
  //-------------------------------------------------------------------------------------------------------------------
         //home task 7 collections v2
         /*User user1 = new User("Alice","Female",25);
