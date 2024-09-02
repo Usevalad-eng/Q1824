@@ -19,13 +19,22 @@ public class PlayList {
         System.out.println("Track is removed");
     }
 
-    public List<AudioTrack> searchByTitle(String title){
+    public void searchByTitle(String title){
         for (AudioTrack i : audioTracks) {
             if (i.getTitle().equalsIgnoreCase(title)){
                 System.out.println(title + " - " + " Songs/podcasts by title: " + i);
             }
         }
-        return audioTracks;
+    }
+
+    public List<AudioTrack> searchByTitleV2(String title){
+        List<AudioTrack> result = new ArrayList<>();
+        for (AudioTrack track : audioTracks){
+            if (track.getTitle().toLowerCase().contains(title.toLowerCase())){
+              result.add(track);
+            }
+        }
+        return result;
     }
 
     public void searchByArtist(String artist){
@@ -72,4 +81,9 @@ public class PlayList {
             System.out.println(" - " + i);
         }
     }
+
+    public void sortByRating(){
+        audioTracks.sort((t1,t2) -> Integer.compare(t2.getRating(),t1.getRating()));
+    }
+
 }

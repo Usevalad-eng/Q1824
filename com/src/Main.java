@@ -1,18 +1,54 @@
 import homeTasks.homeTask8Strings.AnalyzerOfText;
 import homeTasks.homeTask8Strings.AnalyzerOfTextV2;
-import homeTasks.homeTask9MusicPlaylist.MusicItem;
-import homeTasks.homeTask9MusicPlaylist.PlayList;
-import homeTasks.homeTask9MusicPlaylist.Podcast;
-import homeTasks.homeTask9MusicPlaylist.Song;
+import homeTasks.homeTask9MisicPlayListV2.*;
+import homeTasks.homeTask9MusicPlaylist.*;
+
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
   //------------------------------------------------------------------------------------------------------------------
+        //home task 10
+
+  //------------------------------------------------------------------------------------------------------------------
+        //home task 9 music playlistV2
+        /*PlayListV2 playListL = new PlayListV2();
+        MusicItemV2 song1 = new SongV2("Song one","Artist one", 180, "Rock", 5, "album1");
+        MusicItemV2 song2 = new SongV2("Song two","Artist two", 190, "Pop", 4, "album2");
+        MusicItemV2 podcast1 = new PodcastV2("Pod one","Artist two", 200, "Pop", 3, "www.h.com");
+        playListL.addTrack(song1);
+        playListL.addTrack(song2);
+        playListL.addTrack(podcast1);
+        System.out.println("*****************************************************************************************");
+        System.out.println("Searching title: Pod");
+        List<AudioTrackV2> podcasts = playListL.searchbyTitle("Pod one");
+        for (AudioTrackV2 track : podcasts){
+            System.out.println(track.getTitle() + " " + track.getArtist());
+        }
+        System.out.println("*****************************************************************************************");
+        System.out.println("Searching Artist: 'Artist two' ");
+        List<AudioTrackV2> podcasts2 = playListL.searchbyArtist("Artist two");
+        for (AudioTrackV2 track : podcasts2){
+            System.out.println(track.getTitle() + " " + track.getArtist());
+        }
+        System.out.println("*****************************************************************************************");
+        System.out.println("Searching Genre: 'Pop' ");
+        List<AudioTrackV2> podcasts3 = playListL.searchbyGenre("Pop");
+        for (AudioTrackV2 track : podcasts3){
+            System.out.println(track.getTitle() + " " + track.getArtist() + " " + track.getGenre());
+        }
+        System.out.println("*****************************************************************************************");
+        playListL.removeTrack(song2);
+        playListL.printPlaylist();
+        playListL.getAllDuration();
+        playListL.addTrack(song2);
+        playListL.sortPlaylist();*/
+ //-------------------------------------------------------------------------------------------------------------------
         //home task 9 music playlist
-        PlayList playList = new PlayList();
-        MusicItem song1 = new Song("Song one","Artist one", 180, "Rock", 5);
-        MusicItem song2 = new Song("Song two","Artist two", 190, "Pop", 4);
-        MusicItem podcast1 = new Podcast("Pod one","Artist two", 200, "Pop", 3);
+        /*PlayList playList = new PlayList();
+        MusicItem song1 = new Song("Song one","Artist one", 180, "Rock", 5, "album1");
+        MusicItem song2 = new Song("Song two","Artist two", 190, "Pop", 4, "album2");
+        MusicItem podcast1 = new Podcast("Pod one","Artist two", 200, "Pop", 3, "www.h.com");
         playList.addTrack(song1);
         playList.addTrack(song2);
         playList.addTrack(podcast1);
@@ -24,6 +60,17 @@ public class Main {
         playList.getTotalDuration();
         playList.addTrack(song2);
         playList.sortPlaylist();
+        System.out.println("*****************************************************************************************");
+        System.out.println("Searching for Pod");
+        List<AudioTrack> podcasts = playList.searchByTitleV2("pod");
+        for (AudioTrack track : podcasts){
+            System.out.println(track.getTitle());
+        }
+        System.out.println("*****************************************************************************************");
+        podcast1.setRating(1);
+        playList.sortByRating();
+        System.out.println("Playlist sorted by rating");
+        playList.printPlaylist();*/
  //-------------------------------------------------------------------------------------------------------------------
         //new task
         /*AnalyzerOfText analyzerOfText = new AnalyzerOfText();
