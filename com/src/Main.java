@@ -1,16 +1,55 @@
+import homeTasks.homeTask10Children.Child;
+import homeTasks.homeTask10Children.Parent;
 import homeTasks.homeTask8Strings.AnalyzerOfText;
 import homeTasks.homeTask8Strings.AnalyzerOfTextV2;
 import homeTasks.homeTask9MisicPlayListV2.*;
 import homeTasks.homeTask9MusicPlaylist.*;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
   //------------------------------------------------------------------------------------------------------------------
-        //home task 10
+        //home task 10a java 8 features
+        /*List<Integer> numbers = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+        Optional<Integer> min = numbers.stream().min(Integer::compare);
+        System.out.println(min.orElse(0));
+        Optional<Integer> max = numbers.stream().max(Integer::compare);
+        System.out.println(max.orElse(0));
+        System.out.println("----------------------------------------");
+        System.out.println(numbers.stream().filter(w->w%2==0).reduce((x,y)->x+y).get());
+        System.out.println("----------------------------------------");
+        numbers.stream().skip(4).forEach(s-> System.out.print(s + " "));*/
+//--------------------------------------------------------------------------------------------------------------
+        //home task 10b java 8 features
+        List<Parent> parents = Arrays.asList(
+                new Parent("Parent1", 35, Arrays.asList(
+                        new Child("child11",5,true),
+                        new Child("child33",14,false))),
+                new Parent("Parent2", 52, Arrays.asList(
+                        new Child("child1",15,true),
+                        new Child("child2",20,false),
+                        new Child("child3",24,false),
+                        new Child("child4",21,false)))
+                );
 
-  //------------------------------------------------------------------------------------------------------------------
+        parents.stream()
+                .flatMap(parent -> parent.getChildren().stream())
+                .filter(child -> child.getName().contains("2"))
+                .forEach(System.out::println);
+        parents.stream()
+                .filter(parent -> parent.getChildren().size()>3)
+                .forEach(System.out::println);
+        parents.stream()
+                .flatMap(parent -> parent.getChildren().stream())
+                .filter(child -> child.isMan()==true)
+                .forEach(System.out::println);
+
+//------------------------------------------------------------------------------------------------------------------
         //home task 9 music playlistV2
         /*PlayListV2 playListL = new PlayListV2();
         MusicItemV2 song1 = new SongV2("Song one","Artist one", 180, "Rock", 5, "album1");
