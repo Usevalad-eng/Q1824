@@ -1,7 +1,6 @@
-package homeTasks.homeTask9MusicPlaylist;
+package homeTasks.homeTask9MisicPlayListV2;
 
-public  abstract class MusicItem implements AudioTrack{
-
+public abstract class MusicItemV2 implements AudioTrackV2{
     String title;
     String artist;
     int duration;
@@ -11,7 +10,8 @@ public  abstract class MusicItem implements AudioTrack{
     static {
         System.out.println("Rating of song or podcast  must be from 0 to 5");
     }
-    public MusicItem(String title, String artist, int duration, String genre, int rating) {
+
+    public MusicItemV2(String title, String artist, int duration, String genre, int rating) {
         this.title = title;
         this.artist = artist;
         this.duration = duration;
