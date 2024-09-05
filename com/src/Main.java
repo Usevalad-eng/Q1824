@@ -1,18 +1,16 @@
-import homeTasks.homeTask10Children.Child;
-import homeTasks.homeTask10Children.Parent;
-import homeTasks.homeTask8Strings.AnalyzerOfText;
-import homeTasks.homeTask8Strings.AnalyzerOfTextV2;
-import homeTasks.homeTask9MisicPlayListV2.*;
-import homeTasks.homeTask9MusicPlaylist.*;
-
-import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import homeTasks.homeTask11Exceptions.ServiceOfExceptions;
+import homeTasks.homeTask11Exceptions.ServiceOfExceptionsWithExit;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
   //------------------------------------------------------------------------------------------------------------------
         //home task 11 exceptions
+        ServiceOfExceptions serviceOfExceptions = new ServiceOfExceptions();
+        serviceOfExceptions.exceptionAnalyzer();
+        System.out.println("______________________________________________");
+
+        ServiceOfExceptionsWithExit serviceOfExceptionsWithExit = new ServiceOfExceptionsWithExit();
+        serviceOfExceptionsWithExit.run();
 
   //__________________________________________________________________________________________________________________
         //home task 10a java 8 features
@@ -135,7 +133,7 @@ public class Main {
         System.out.println("Playlist sorted by rating");
         playList.printPlaylist();*/
  //-------------------------------------------------------------------------------------------------------------------
-        //new task
+        //home task 8 strings
         /*AnalyzerOfText analyzerOfText = new AnalyzerOfText();
         analyzerOfText.analyzerOfText();*/
 

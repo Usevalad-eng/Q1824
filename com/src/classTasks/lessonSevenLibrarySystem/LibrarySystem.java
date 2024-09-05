@@ -92,7 +92,7 @@ public class LibrarySystem {
             System.out.println("6 List of all books");
             System.out.println("0 Exit");
 
-            Integer choice = Integer.parseInt(scanner.nextLine());  //int choice..
+            Integer choice = Integer.parseInt(scanner.nextLine());
 
             switch (choice){
                 case 1:
