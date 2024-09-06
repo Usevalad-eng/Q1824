@@ -12,12 +12,11 @@ public class ServiceOfExceptionsWithExit {
             System.out.println("Enter text");
             String text = scanner.nextLine();
             userInput.add(text);
-            System.out.println(text + " was entered");
-            System.out.println("To get oldest element enter 'get'");
+            System.out.println("\"" + text + "\"" + " was entered");
+            System.out.println("To get the oldest element enter 'get' (after choosing menu item)");
             if (text.equalsIgnoreCase("get")){
-                System.out.println(userInput.get(0) + " is the oldest element");
+                System.out.println("\""+ userInput.get(0) + "\"" + " is the oldest element");
             }
-
         } catch (Exception ex){
             System.out.println(ex.getMessage());
         }
@@ -26,8 +25,8 @@ public class ServiceOfExceptionsWithExit {
     public void run() throws Exception {
         while (true){
             System.out.println("\n----Menu----");
-            System.out.println("1 Analyze text with possibility of exception");
-            System.out.println("0 Exit");
+            System.out.println("1 - Analyze text with possibility of exception");
+            System.out.println("0 - Exit");
 
             int choice = Integer.parseInt(scanner.nextLine());
 
@@ -37,7 +36,7 @@ public class ServiceOfExceptionsWithExit {
                     System.out.println("Program is finished");
                     return;
                 }
-                default -> System.out.println("Not right choice");
+                default -> System.out.println("Not right choice, choose 1 or 0");
             }
         }
     }
