@@ -1,16 +1,67 @@
 import homeTasks.homeTask11Exceptions.ServiceOfExceptions;
 import homeTasks.homeTask11Exceptions.ServiceOfExceptionsWithExit;
+import homeTasks.homeTask11ExceptionsV2.InputService;
+import homeTasks.homeTask12Vehicle.*;
+
+import java.time.LocalDate;
+import java.util.List;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws Exception {
   //------------------------------------------------------------------------------------------------------------------
+        //home task 12 Vehicle
+        /*Vehicle vehicle1 = new Car(1, "model1", "brand1", 1985, 2000, 5);
+        Vehicle vehicle2 = new Bus(2, "model1", "brand1", 1985, 2000, 25);
+        Vehicle vehicle3 = new Truck(3, "model1", "brand1", 1985, 2000, 20);
+        Driver driver1 = new Driver(1, "Name1", "Lname1", 25, "B category");
+        Driver driver2 = new Driver(2, "Name2", "Lname2", 35, "B, C, D category");
+        Trip trip1 = new Trip(1, vehicle1, driver1, LocalDate.now(),
+                LocalDate.of(2024, 11, 10),250);
+        FleetManager fleetManager = new FleetManager();
+        fleetManager.addVehicle(vehicle1);
+        fleetManager.addVehicle(vehicle2);
+        fleetManager.addDriver(driver1);
+        fleetManager.addDriver(driver2);
+        fleetManager.planTrip(trip1);
+        System.out.println("----------------------------------------");
+        System.out.println("Available vehicles: ");
+        List<Vehicle> vehicleList = fleetManager.getAvailableVehicle();
+        for (Vehicle v : vehicleList){
+            System.out.println(v);
+        }
+        System.out.println("----------------------------------------");
+        System.out.println("Available drivers: ");
+        List<Driver> driverList = fleetManager.getAvailableDriver();
+        for (Driver d : driverList){
+            System.out.println(d);
+        }
+        System.out.println("----------------------------------------");
+        System.out.println("History of trip of Vehicle with id: " + "\"" + vehicle1.getId() + "\"");
+        fleetManager.getHistory(vehicle1);*/
+  //-----------------------------------------------------------------------------------------------------------------
         //home task 11 exceptions
-        ServiceOfExceptions serviceOfExceptions = new ServiceOfExceptions();
+        /*InputService inputService = new InputService();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter words in memory or \"Exit\" to exit");
+        while (true){
+            String input = scanner.nextLine();
+            if (input.equalsIgnoreCase("exit")){
+                break;
+            }
+            inputService.processInput(input);
+        }
+        System.out.println("Program terminated");
+        scanner.close();*/
+
+ //-------------------------------------------------------------------------------------------------------------------
+        //home task 11 exceptions
+        /*ServiceOfExceptions serviceOfExceptions = new ServiceOfExceptions();
         serviceOfExceptions.exceptionAnalyzer();
         System.out.println("______________________________________________");
 
         ServiceOfExceptionsWithExit serviceOfExceptionsWithExit = new ServiceOfExceptionsWithExit();
-        serviceOfExceptionsWithExit.run();
+        serviceOfExceptionsWithExit.run();*/
 
   //__________________________________________________________________________________________________________________
         //home task 10a java 8 features
