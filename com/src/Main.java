@@ -1,3 +1,4 @@
+import classTasks.lessonNineZoo.*;
 import homeTasks.homeTask11Exceptions.ServiceOfExceptions;
 import homeTasks.homeTask11Exceptions.ServiceOfExceptionsWithExit;
 import homeTasks.homeTask11ExceptionsV2.InputService;
@@ -10,6 +11,41 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws Exception {
   //------------------------------------------------------------------------------------------------------------------
+        //classwork nine Zoo
+        Animal lion1 = new Lion("Leo", 150, 2);
+        Animal lion2 = new Lion("Leo2", 130, 1);
+        Animal eleph1 = new Elephant("Eleph", 1500, 20);
+        Animal  peng1 = new Penguin("Peng", 13, 10);
+        lion1.makeSound();
+        lion2.makeSound();
+        eleph1.makeSound();
+        peng1.makeSound();
+        Zoo zoo = new Zoo();
+        zoo.addAnimal(lion1);
+        zoo.addAnimal(lion2);
+        zoo.addAnimal(eleph1);
+        zoo.addAnimal(peng1);
+        zoo.swimIfCan();
+        try {
+            zoo.removeAnimal(lion2);
+        }catch (AnimalNotFound e){
+            System.out.println(e);
+        }
+        System.out.println("Animals:");
+        System.out.println(zoo);
+        lion1.eat();
+        eleph1.eat();
+        peng1.eat();
+        System.out.println("********************");
+        zoo.makeSoundOfAllAnimals();
+        zoo.makeFeedAllAnimals();
+        System.out.println("Animals:");
+        zoo.printAllAnimals();
+        System.out.println("********************");
+        System.out.println("Animals:");
+        zoo.sortedAnimals();
+
+  //-----------------------------------------------------------------------------------------------------------------
         //home task 12 Vehicle
         /*Vehicle vehicle1 = new Car(1, "model1", "brand1", 1985, 2000, 5);
         Vehicle vehicle2 = new Bus(2, "model1", "brand1", 1985, 2000, 25);
