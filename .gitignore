@@ -54,6 +54,12 @@ com/.idea/
 com/*.iml
 *.iml
 
+target/
+sharelane1/target/
+sharelane1/.idea/
+sharelane1/*.iml
+
+
 # mpeltonen/sbt-idea plugin
 .idea_modules/
 
