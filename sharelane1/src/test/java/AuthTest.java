@@ -2,18 +2,18 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static org.testng.AssertJUnit.*;
+import static org.testng.AssertJUnit.assertEquals;
+import static org.testng.AssertJUnit.assertTrue;
 
 public class AuthTest {
-
+private static final String url = "https://www.sharelane.com/cgi-bin/register.py";
     @Test
     public void zipCodeShouldAccept5Digits(){
         WebDriver webDriver = new ChromeDriver();
         //open site https://www.sharelane.com/cgi-bin/register.py
-        webDriver.get("https://www.sharelane.com/cgi-bin/register.py");
+        webDriver.get(url);
 
         //enter 12345 in zipcode field
         WebElement zipCode = webDriver.findElement(By.name("zip_code"));
@@ -24,11 +24,32 @@ public class AuthTest {
         //expected result - can see Register button
         WebElement registerButton = webDriver.findElement(By.cssSelector("[value=Register]"));
         boolean displayed = registerButton.isDisplayed();
-        assertTrue(displayed);
+
+        assertTrue("russian language", displayed);
+
         //close browser
         webDriver.quit();
-
     }
+
+    @Test
+    public void zipCodeShouldNotAcceptEmptyFields(){
+        WebDriver webDriver = new ChromeDriver();
+
+        webDriver.get(url);
+        WebElement zipCode = webDriver.findElement(By.name("zip_code"));
+        zipCode.sendKeys("");
+        WebElement continueButton = webDriver.findElement(By.cssSelector("[value = Continue]"));
+        continueButton.click();
+
+        WebElement errorMessage = webDriver.findElement(By.cssSelector("[class = error_message]"));
+        String actualErrorMessage = errorMessage.getText();
+        String expectedErrorMessage = "Oops, error on page. ZIP code should have 5 digits";
+
+        assertEquals("", actualErrorMessage,expectedErrorMessage);
+
+        webDriver.quit();
+    }
+
 
     @Test
     public void userCanBeregisteredIfValidDataEntered(){
@@ -36,28 +57,25 @@ public class AuthTest {
 
         webDriver.get("https://www.sharelane.com/cgi-bin/register.py?page=1&zip_code=12345");
 
-        WebElement fnField = webDriver.findElement(By.name("first_name"));
-        fnField.sendKeys("Ivan");
-        WebElement lnField = webDriver.findElement(By.name("last_name"));
-        fnField.sendKeys("Ivanov");
+        WebElement firstName = webDriver.findElement(By.name("first_name"));
+        firstName.sendKeys("Ivann");
+        WebElement lastName = webDriver.findElement(By.name("last_name"));
+        lastName.sendKeys("Ivanovv");
         WebElement email = webDriver.findElement(By.name("email"));
-        fnField.sendKeys("Ivanov@mail.ru");
+        email.sendKeys("Ivan@mail.ru");
         WebElement pass = webDriver.findElement(By.name("password1"));
-        fnField.sendKeys("password");
-        WebElement confirmpass = webDriver.findElement(By.name("password2"));
-        fnField.sendKeys("password");
-        WebElement regButton = webDriver.findElement(By.cssSelector("[value=Register]"));
-        regButton.click();
-        String actualMessage = webDriver.findElement(By.cssSelector("[class=confirmation_massage]")).getText();
+        pass.sendKeys("1111");
+        WebElement confirmPass = webDriver.findElement(By.name("password2"));
+        confirmPass.sendKeys("1111");
+        WebElement registrationButton = webDriver.findElement(By.cssSelector("[value=Register]"));
+        registrationButton.click();
+        //String actualMessage = webDriver.findElement(By.cssSelector("[class=confirmation_massage]")).getText();
+        String actualMessage =
+                webDriver.findElement(By.xpath("/html/body/center/table/tbody/tr[4]/td/span")).getText();
         String expectedMessage = "Account is created!";
-        assertEquals(actualMessage,expectedMessage, "Text is not equal");
+
+        assertEquals("Text is not equal", actualMessage,expectedMessage);
+
         webDriver.quit();
-
     }
-
-    @Test
-    public void test(){
-
-    }
-
 }
