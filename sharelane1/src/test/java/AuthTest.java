@@ -8,12 +8,12 @@ import static org.testng.AssertJUnit.assertEquals;
 import static org.testng.AssertJUnit.assertTrue;
 
 public class AuthTest {
-private static final String url = "https://www.sharelane.com/cgi-bin/register.py";
+private static final String URL = "https://www.sharelane.com/cgi-bin/register.py";
     @Test
     public void zipCodeShouldAccept5Digits(){
         WebDriver webDriver = new ChromeDriver();
         //open site https://www.sharelane.com/cgi-bin/register.py
-        webDriver.get(url);
+        webDriver.get(URL);
 
         //enter 12345 in zipcode field
         WebElement zipCode = webDriver.findElement(By.name("zip_code"));
@@ -25,17 +25,19 @@ private static final String url = "https://www.sharelane.com/cgi-bin/register.py
         WebElement registerButton = webDriver.findElement(By.cssSelector("[value=Register]"));
         boolean displayed = registerButton.isDisplayed();
 
-        assertTrue("russian language", displayed);
+        assertTrue("Russian language!", displayed);
 
         //close browser
         webDriver.quit();
     }
 
+    //task1 - negative tests for zipcode registration
+
     @Test
     public void zipCodeShouldNotAcceptEmptyFields(){
         WebDriver webDriver = new ChromeDriver();
 
-        webDriver.get(url);
+        webDriver.get(URL);
         WebElement zipCode = webDriver.findElement(By.name("zip_code"));
         zipCode.sendKeys("");
         WebElement continueButton = webDriver.findElement(By.cssSelector("[value = Continue]"));
@@ -45,14 +47,33 @@ private static final String url = "https://www.sharelane.com/cgi-bin/register.py
         String actualErrorMessage = errorMessage.getText();
         String expectedErrorMessage = "Oops, error on page. ZIP code should have 5 digits";
 
-        assertEquals("", actualErrorMessage,expectedErrorMessage);
+        assertEquals("Error text doesn't match!", actualErrorMessage,expectedErrorMessage);
 
         webDriver.quit();
     }
 
-
     @Test
-    public void userCanBeregisteredIfValidDataEntered(){
+    public void zipCodeShouldNotAcceptFieldsWithletters(){
+        WebDriver webDriver = new ChromeDriver();
+
+        webDriver.get(URL);
+        WebElement zipCode = webDriver.findElement(By.name("zip_code"));
+        zipCode.sendKeys("rrrrr");
+        WebElement continueButton = webDriver.findElement(By.cssSelector("[value = Continue]"));
+        continueButton.click();
+
+        WebElement errorMessage = webDriver.findElement(By.cssSelector("[class = error_message]"));
+        String actualErrorMessage = errorMessage.getText();
+        String expectedErrorMessage = "Oops, error on page. ZIP code should have 5 digits";
+
+        assertEquals("Error text doesn't match!", actualErrorMessage,expectedErrorMessage);
+
+        webDriver.quit();
+    }
+
+    //task2 - positive test for registration
+    @Test
+    public void userCanBeRegisteredIfValidDataEntered(){
         WebDriver webDriver = new ChromeDriver();
 
         webDriver.get("https://www.sharelane.com/cgi-bin/register.py?page=1&zip_code=12345");
@@ -74,7 +95,7 @@ private static final String url = "https://www.sharelane.com/cgi-bin/register.py
                 webDriver.findElement(By.xpath("/html/body/center/table/tbody/tr[4]/td/span")).getText();
         String expectedMessage = "Account is created!";
 
-        assertEquals("Text is not equal", actualMessage,expectedMessage);
+        assertEquals("Text is not equal!", actualMessage,expectedMessage);
 
         webDriver.quit();
     }
