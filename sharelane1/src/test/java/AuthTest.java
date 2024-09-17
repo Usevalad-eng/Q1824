@@ -12,26 +12,23 @@ private static final String URL = "https://www.sharelane.com/cgi-bin/register.py
     @Test
     public void zipCodeShouldAccept5Digits(){
         WebDriver webDriver = new ChromeDriver();
-        //open site https://www.sharelane.com/cgi-bin/register.py
+
         webDriver.get(URL);
 
-        //enter 12345 in zipcode field
         WebElement zipCode = webDriver.findElement(By.name("zip_code"));
         zipCode.sendKeys("12345");
         WebElement continueButton = webDriver.findElement(By.cssSelector("[value=Continue]"));
         continueButton.click();
-        //click continue button
-        //expected result - can see Register button
+
         WebElement registerButton = webDriver.findElement(By.cssSelector("[value=Register]"));
         boolean displayed = registerButton.isDisplayed();
 
         assertTrue("Russian language!", displayed);
 
-        //close browser
         webDriver.quit();
     }
 
-    //task1 - negative tests for zipcode registration
+    //task1 -  tests for zipcode registration
 
     @Test
     public void zipCodeShouldNotAcceptEmptyFields(){
@@ -53,7 +50,26 @@ private static final String URL = "https://www.sharelane.com/cgi-bin/register.py
     }
 
     @Test
-    public void zipCodeShouldNotAcceptFieldsWithletters(){
+    public void zipCodeShouldNotAcceptLessThan5Digits(){
+        WebDriver webDriver = new ChromeDriver();
+
+        webDriver.get(URL);
+        WebElement zipCode = webDriver.findElement(By.name("zip_code"));
+        zipCode.sendKeys("1234");
+        WebElement continueButton = webDriver.findElement(By.cssSelector("[value = Continue]"));
+        continueButton.click();
+
+        WebElement errorMessage = webDriver.findElement(By.cssSelector("[class = error_message]"));
+        String actualErrorMessage = errorMessage.getText();
+        String expectedErrorMessage = "Oops, error on page. ZIP code should have 5 digits";
+
+        assertEquals("Error text doesn't match!", actualErrorMessage,expectedErrorMessage);
+
+        webDriver.quit();
+    }
+
+    @Test
+    public void zipCodeShouldNotAcceptFieldsWithLetters(){
         WebDriver webDriver = new ChromeDriver();
 
         webDriver.get(URL);
@@ -69,6 +85,68 @@ private static final String URL = "https://www.sharelane.com/cgi-bin/register.py
         assertEquals("Error text doesn't match!", actualErrorMessage,expectedErrorMessage);
 
         webDriver.quit();
+    }
+
+    @Test
+    public void zipCodeShouldNotAcceptFieldsWithSpecialCharacters(){
+        WebDriver webDriver = new ChromeDriver();
+
+        webDriver.get(URL);
+        WebElement zipCode = webDriver.findElement(By.name("zip_code"));
+        zipCode.sendKeys(")*&^%%$#@!");
+        WebElement continueButton = webDriver.findElement(By.cssSelector("[value = Continue]"));
+        continueButton.click();
+
+        WebElement errorMessage = webDriver.findElement(By.cssSelector("[class = error_message]"));
+        String actualErrorMessage = errorMessage.getText();
+        String expectedErrorMessage = "Oops, error on page. ZIP code should have 5 digits";
+
+        assertEquals("Error text doesn't match!", actualErrorMessage,expectedErrorMessage);
+
+        webDriver.quit();
+    }
+
+    @Test
+    public void zipCodeShouldNotAcceptFieldsWithlettersAndDigits(){
+        WebDriver webDriver = new ChromeDriver();
+
+        webDriver.get(URL);
+        WebElement zipCode = webDriver.findElement(By.name("zip_code"));
+        zipCode.sendKeys("dd888");
+        WebElement continueButton = webDriver.findElement(By.cssSelector("[value = Continue]"));
+        continueButton.click();
+
+        WebElement errorMessage = webDriver.findElement(By.cssSelector("[class = error_message]"));
+        String actualErrorMessage = errorMessage.getText();
+        String expectedErrorMessage = "Oops, error on page. ZIP code should have 5 digits";
+
+        assertEquals("Error text doesn't match!", actualErrorMessage,expectedErrorMessage);
+
+        webDriver.quit();
+    }
+
+    @Test
+    public void zipCodeShouldAcceptMoreThanFiveDigits(){
+        WebDriver webDriver = new ChromeDriver();
+
+        webDriver.get(URL);
+        WebElement zipCode = webDriver.findElement(By.name("zip_code"));
+        zipCode.sendKeys("123456");
+        WebElement continueButton = webDriver.findElement(By.cssSelector("[value = Continue]"));
+        continueButton.click();
+
+        if (webDriver.findElement(By.xpath("/html/body/center/table/tbody/tr[3]/td/p/b")).isDisplayed()){
+
+            String actualErrorMessage = webDriver
+                    .findElement(By.xpath("/html/body/center/table/tbody/tr[3]/td/p/b")).getText();
+            String expectedMessage = "Sign Up";
+
+            assertEquals("Error text doesn't match!", actualErrorMessage,expectedMessage);
+
+            webDriver.quit();
+        }else {
+            webDriver.quit();
+        }
     }
 
     //task2 - positive test for registration
