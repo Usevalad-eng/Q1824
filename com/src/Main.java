@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
   //------------------------------------------------------------------------------------------------------------------
         //classwork nine Zoo
-        Animal lion1 = new Lion("Leo", 150, 2);
+        /*Animal lion1 = new Lion("Leo", 150, 2);
         Animal lion2 = new Lion("Leo2", 130, 1);
         Animal eleph1 = new Elephant("Eleph", 1500, 20);
         Animal  peng1 = new Penguin("Peng", 13, 10);
@@ -43,7 +43,7 @@ public class Main {
         zoo.printAllAnimals();
         System.out.println("********************");
         System.out.println("Animals:");
-        zoo.sortedAnimals();
+        zoo.sortedAnimals();*/
 
   //-----------------------------------------------------------------------------------------------------------------
         //home task 12 Vehicle
